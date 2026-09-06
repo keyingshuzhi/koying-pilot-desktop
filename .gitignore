@@ -1,0 +1,12 @@
+# Release assets are uploaded to GitHub Releases, not committed to Git.
+*.dmg
+*.exe
+*.msi
+*.zip
+*.tar.gz
+
+# Credentials and local build output
+.env
+.env.*
+dist/
+build/
