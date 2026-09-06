@@ -1,0 +1,6 @@
+# Bilingual-pair consistency record (docs/i18n/README.md): the git blob hash of each
+# side as of the last confirmed-consistent state. Both languages carry equal authority;
+# after editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write .agents/notes/implemented/bug-fix/2026-08-27-macos-edit-menu-shortcuts.md
+2026-08-27-macos-edit-menu-shortcuts.md: f298911b4fb439dcb3a5a8acc8e845283ce5300b
+2026-08-27-macos-edit-menu-shortcuts.zh.md: 6025e83e5d9085b11141cac5baf8100a696cc18c

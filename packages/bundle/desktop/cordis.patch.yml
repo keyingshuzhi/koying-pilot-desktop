@@ -1,0 +1,8 @@
+# Koying Pilot keeps the shared model adapters, model picker, and Models
+# settings page intact. Users configure provider routes and credentials in the
+# application's own DSH_HOME; the product layer contributes only its branded
+# About and acknowledgements page.
+
+- insert:
+    - id: ui-about
+      name: '@deepseek-ai/dsh-client-ui-about'

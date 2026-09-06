@@ -1,0 +1,146 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 720px;
+  color: var(--dsw-alias-label-primary);
+}
+
+/* The product plugin replaces the generic shell artwork through semantic
+   hooks; the shared sidebar keeps its default branding in every other profile. */
+:global(html[data-dsh-product='koying-pilot'] [data-dsh-brand-wordmark]),
+:global(html[data-dsh-product='koying-pilot'] [data-dsh-brand-symbol]) {
+  display: none;
+}
+
+:global(html[data-dsh-product='koying-pilot'] button:has(> [data-dsh-brand-wordmark])) {
+  gap: 8px;
+}
+
+:global(html[data-dsh-product='koying-pilot'] button:has(> [data-dsh-brand-wordmark]))::before,
+:global(html[data-dsh-product='koying-pilot'] button:has(> [data-dsh-brand-symbol]))::before {
+  content: 'K';
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: linear-gradient(145deg, #102249, #4176e6);
+  color: #fff;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 650;
+}
+
+:global(html[data-dsh-product='koying-pilot'] button:has(> [data-dsh-brand-wordmark]))::after {
+  content: '柯影智航';
+  overflow: hidden;
+  color: var(--dsw-alias-label-primary);
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+:global(html[data-dsh-product='koying-pilot'] button:has(> [data-dsh-brand-symbol]):hover)::before {
+  display: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--dsw-alias-bg-module-platform);
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, var(--dsw-alias-button-primary-fill), var(--dsw-alias-button-info-fill));
+  color: var(--dsw-alias-label-primary-foreground);
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 650;
+  letter-spacing: -3px;
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--dsw-alias-button-primary-fill) 26%, transparent);
+}
+
+.eyebrow,
+.intro,
+.card p,
+.footer {
+  margin: 0;
+}
+
+.eyebrow {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.title {
+  margin: 2px 0 4px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.intro {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.card {
+  padding: 14px 16px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 21px;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 4px 2px 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    align-items: flex-start;
+  }
+
+  .mark {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    font-size: 30px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
