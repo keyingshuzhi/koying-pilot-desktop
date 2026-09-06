@@ -2,7 +2,7 @@
 
 柯影智航（Koying Pilot）是面向 macOS 与 Windows 的独立桌面 AI 助手应用。
 
-本仓库仅用于发布已构建的桌面安装包、校验值和适用的许可证声明；不包含 DeepSeek Harness 或其他上游项目的源代码、测试、内部文档或构建工程。
+本仓库用于发布已构建的桌面安装包、校验值、适用的许可证声明，以及柯影智航的 macOS/Windows 原生封装代码。它不包含 DeepSeek Harness 或其他上游项目的完整源代码、测试、内部文档、依赖目录或完整构建工程。
 
 ## 下载与安装
 
@@ -36,6 +36,10 @@ shasum -a 256 Koying-Pilot-0.1.1.dmg
 柯影智航不是 DeepSeek 的官方产品，也不受 DeepSeek 赞助或背书。DeepSeek 及相关名称、标识可能是其各自权利人的商标；本项目不主张任何商标权。
 
 适用的上游许可证见 [LICENSE](LICENSE)，第三方组件声明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+## 桌面封装代码
+
+[desktop-wrapper](desktop-wrapper/README.md) 保留 macOS Cocoa/WKWebView 壳、Windows WinForms/WebView2 壳、安装器、平台清单、封装脚本和应用图标。该目录只包含桌面封装层；构建脚本依赖兼容的 DeepSeek Harness v0.1 源码工作区，因此不能在本仓库单独构建完整运行时。
 
 ## 使用与隐私
 

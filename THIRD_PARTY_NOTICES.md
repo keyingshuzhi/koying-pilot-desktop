@@ -1,6 +1,6 @@
 # Third-party notices
 
-This repository publishes desktop installation assets rather than source code. Each release must include this file and the applicable license texts for components present in that release.
+This repository publishes desktop installation assets and the Koying Pilot native desktop packaging layer, not the full upstream source tree. Each release must include this file and the applicable license texts for components present in that release.
 
 The Koying Pilot 0.1.1 desktop releases are independently packaged from DeepSeek Harness v0.1, which is licensed under the MIT License. The full upstream MIT notice is reproduced in [LICENSE](LICENSE).
 

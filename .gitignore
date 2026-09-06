@@ -8,5 +8,6 @@
 # Credentials and local build output
 .env
 .env.*
+node_modules/
 dist/
 build/
